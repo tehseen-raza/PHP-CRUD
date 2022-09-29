@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.innerContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 20px 55px rgba(167, 167, 167, 0.25);
+  border-radius: 20px;
+  width: 800px;
+  padding: 40px;
+}
+.main_Heading {
+  text-align: center;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+form {
+  margin-top: 40px;
+}
+input {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 33px;
+  border: 1px solid #d4d4d4;
+  outline: none;
+  color: #8e8e8e;
+  border-radius: 10px;
+  padding: 8px 24px;
+  min-height: 72px;
+  transition: 0.3s all;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #a7a7a7;
+}
+textarea {
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #d4d4d4;
+  outline: none;
+  color: #8e8e8e;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 24px;
+  resize: none;
+  transition: 0.3s all;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid #2e3192;
+  box-shadow: 0 20px 55px rgb(167 167 167 / 25%);
+}
+.submitBTN,
+.viewRecords {
+  box-shadow: 0px 10px 40px 0px rgba(46, 48.99999999999993, 146, 0.2);
+  transition: all 0.3s;
+  min-height: 60px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  padding: 20px 60px;
+  border-radius: 80px;
+  margin-top: 30px;
+  cursor: pointer;
+  border: 1px solid #2e3192;
+}
+.submitBTN {
+  color: #ffffff;
+  background: #2e3192;
+  border: 1px solid transparent;
+}
+.viewRecords {
+  text-decoration: none;
+  color: #2e3192;
+}
+.viewRecords:hover {
+  box-shadow: none;
+}
+.submitBTN:hover {
+  border: 1px solid #2e3192;
+  background: #ffffff;
+  color: #2e3192;
+}
