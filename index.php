@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    
+
     <?php include 'connection.php'; ?>
 
     <div class="container">
@@ -27,11 +27,14 @@
                 </div>
                 <textarea name="message" rows="8" placeholder="Enter Message"></textarea>
 
-                <button class="submitBTN" type="submit">Submit</button>
-                <!-- <a class="viewRecords" href="#!">View Existing Records</a> -->
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <button class="submitBTN" name="submitBtn" value="saveData" type="submit">Submit</button>
+                    <a class="viewRecords" href="view.php">View Existing Records</a>
+                </div>
             </form>
         </div>
     </div>
+
 </body>
 
 </html>

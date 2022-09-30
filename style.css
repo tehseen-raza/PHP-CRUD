@@ -95,3 +95,38 @@ textarea:focus {
   background: #ffffff;
   color: #2e3192;
 }
+
+/* === Table === */
+table {
+  width: calc(100% / 1.5);
+  background: #ffffff;
+  border-collapse: collapse;
+  box-shadow: 0px 20px 55px rgba(167, 167, 167, 0.25);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+th {
+  border-bottom: 1px solid #364043;
+  background: #2e3192;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 26px;
+  padding: 21px;
+  text-align: left;
+}
+
+td {
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  padding: 18px 21px;
+  color: #5e5e5e;
+}
+
+tbody tr {
+  background: #f5f6ff;
+}
