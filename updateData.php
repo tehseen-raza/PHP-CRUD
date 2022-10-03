@@ -34,7 +34,6 @@
 
                 <div style="display: flex; align-items: center; justify-content: space-between;">
                     <button class="submitBTN" type="submit" name="updateBtn">Update Record</button>
-                    <input class="submitBTN" type="submit" name="updateBtn" value="Update Record">
                     <a class="viewRecords" href="view.php">Go Back</a>
                 </div>
             </form>
@@ -52,7 +51,7 @@
 
 
 
-        $query = "UPDATE crud SET Name='$name', Phone='$phone', Email='$email', City='$city' WHERE ID='$id";
+        $query = "UPDATE crud SET Name='$name', Phone='$phone', Email='$email', City='$city' WHERE ID='$id'";
 
         $data = mysqli_query($conn, $query);
 
