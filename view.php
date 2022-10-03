@@ -62,11 +62,11 @@
 
             $getData = "SELECT * FROM crud";
             $data = mysqli_query($conn, $getData);
-            $result = mysqli_fetch_row($data);
+            $result = mysqli_num_rows($data);
 
 
-            if ($result) {
-                while ($tableData = mysqli_fetch_assoc($data)) {
+            if ($result > 0) {
+                while ($tableData = mysqli_fetch_array($data)) {
             ?>
                     <tr>
                         <td><?php echo $tableData['ID'] ?></td>
@@ -98,6 +98,9 @@
             } else {
                 echo "No Data Found";
             }
+
+            mysqli_close($conn);
+
             ?>
         </tbody>
         <a class="goBackBtn" href="http://localhost:8080/php-programs/crud/index.php">

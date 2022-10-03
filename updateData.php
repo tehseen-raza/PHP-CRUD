@@ -16,7 +16,7 @@
     $id = $_GET['id'];
     $query = "SELECT * FROM crud WHERE ID='$id'";
     $result = mysqli_query($conn, $query);
-    $row = mysqli_fetch_assoc($result);
+    $row = mysqli_fetch_array($result);
     ?>
     <div class="container">
         <div class="innerContainer">
@@ -33,7 +33,8 @@
                 <textarea name="Message" rows="8" placeholder="Enter Message"></textarea>
 
                 <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <button class="submitBTN" name="updateBtn">Update Record</button>
+                    <button class="submitBTN" type="submit" name="updateBtn">Update Record</button>
+                    <input class="submitBTN" type="submit" name="updateBtn" value="Update Record">
                     <a class="viewRecords" href="view.php">Go Back</a>
                 </div>
             </form>
@@ -47,27 +48,31 @@
         $phone = $_POST['phone'];
         $email = $_POST['email'];
         $city = $_POST['city'];
-        $msg = $_POST['message'];
+        // $msg = $_POST['message'];
 
-        $query = "UPDATE crud SET Name='$name', Phone='$phone', Email='$email', City='$city', Message='$msg' WHERE id='$id";
 
-        $updatedData = mysqli_query($conn, $query);
 
-        if ($updatedData) {
+        $query = "UPDATE crud SET Name='$name', Phone='$phone', Email='$email', City='$city' WHERE ID='$id";
+
+        $data = mysqli_query($conn, $query);
+
+        if ($data) {
     ?>
             <script type="text/javascript">
                 alert('Data Updated Successfully.');
-                window.location.href = 'http://localhost:8080/php-programs/crud/index.php';
+                window.location.href = 'http://localhost:8080/php-programs/crud/view.php';
             </script>
         <?php
         } else {
         ?>
             <script type="text/javascript">
                 alert('Something Went Wrong! Please Try Again!');
+                window.location.href = 'http://localhost:8080/php-programs/crud/view.php';
             </script>
     <?php
         }
     }
+    $conn->close();
     ?>
 
 
